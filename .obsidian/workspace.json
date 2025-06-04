@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "cacebbbb26f8bf9a",
+    "type": "split",
+    "children": [
+      {
+        "id": "a2dd5c52f7ab7385",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dc0f9a9db3041e0b",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "HTB/footprinting/attachments/20240608205941.png"
+              },
+              "icon": "lucide-image",
+              "title": "20240608205941"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1cd4bd3b87b79f9b",
+    "type": "split",
+    "children": [
+      {
+        "id": "a38c0bba724c5a00",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a827289e71b38d6c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "e901642d014329c6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e6891a922ef754cf",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 471.5
+  },
+  "right": {
+    "id": "9458424f11807f28",
+    "type": "split",
+    "children": [
+      {
+        "id": "2fc92c81d289619b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8cc6d73c140e90a9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "HTB/footprinting/attachments/20240608205941.png",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 20240608205941"
+            }
+          },
+          {
+            "id": "89eba97c41b317b1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "HTB/footprinting/attachments/20240608205941.png",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 20240608205941"
+            }
+          },
+          {
+            "id": "0bcacadfd3f91051",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a378300fb610c741",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "HTB/footprinting/attachments/20240608205941.png",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 20240608205941"
+            }
+          },
+          {
+            "id": "8d49720bf1612aac",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "dc0f9a9db3041e0b",
+  "lastOpenFiles": [
+    "HTB/footprinting/attachments/20240608202756.png",
+    "HTB/footprinting/attachments/20240608202519.png",
+    "HTB/footprinting/attachments/20240603010327.png",
+    "HTB/footprinting/attachments/20231005064328.png",
+    "HTB/footprinting/attachments/20231003171027.png",
+    "HTB/footprinting/attachments/20231003121655.png",
+    "HTB/footprinting/attachments/20231003121605.png",
+    "HTB/footprinting/attachments/20231003121250.png",
+    "HTB/footprinting/attachments/20231003120926.png",
+    "HTB/footprinting/attachments/20231003044015.png",
+    "HTB/footprinting/attachments/20231003031628.png",
+    "README.md",
+    "HTB/footprinting/crawling.md",
+    "HTB/boxes/inlanefreight.md",
+    "HTB/vuln-discovery/Nessus.md",
+    "HTB/vuln-discovery",
+    "HTB/footprinting/virtual hosts.md",
+    "HTB/pentest path sylabus.md",
+    "HTB/boxes/Hard box.md",
+    "HTB/boxes",
+    "HTB/nmap-net-enum/nmap-lab/Firewall-ids-ips-evas-labs.md",
+    "HTB/nmap-net-enum/Firewall-IDS-IPS-evasion.md",
+    "HTB/footprinting/scans/nmap.md",
+    "HTB/boxes/nibblles-vm/nibbles-web-footprinting.md",
+    "HTB/boxes/nibblles-vm/nibbles-priv-escalation.md",
+    "HTB/boxes/nibblles-vm/nibbles-metasploit.md",
+    "HTB/boxes/nibblles-vm/nibbles-foothold.md",
+    "HTB/boxes/nibblles-vm/nibbles-enumeration.md",
+    "HTB/boxes/GetSimple-vm/Web-Footprint.md",
+    "HTB/boxes/GetSimple-vm/Priv-Escalation.md",
+    "HTB/boxes/GetSimple-vm/FootHold.md",
+    "HTB/boxes/GetSimple-vm/Enumeration.md",
+    "HTB/footprinting/Cloud Resources.md",
+    "HTB/footprinting/DNS.md",
+    "HTB/footprinting/Active Infrastructure Identification.md",
+    "HTB/footprinting/scans/185.6.124.171.md",
+    "HTB/footprinting/scans/zone transfers 1.md",
+    "HTB/footprinting/zone transfers.md",
+    "HTB/footprinting/scans",
+    "HTB/using-htb",
+    "misc-challenges",
+    "HTB/footprinting/attachments"
+  ]
+}

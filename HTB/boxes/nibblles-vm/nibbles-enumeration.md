@@ -1,0 +1,19 @@
+- starting with an nmap scan to look for open ports
+	- nmap -sV --open -oA nibbles_initial_scan \<ip address \>
+	-  -sV : service enumeration against default top 1k ports
+	- only returns open ports with --open
+	- can check for ports being scanned by not specifying target
+	- nmap -v -oG outputs verbose greppable format
+	- outputting with -oA gives XML output, greppable output, and text output
+	- before poking open ports we can run a full tcp port scan 
+	- nmap -p- --open -oA nibbes_full_tcp_scan \<ip address\> 
+	- -p- scans all 65,535 tcp ports
+	- grab banners with netcat : nc -nv \<ip address\> \<port\> 
+	- with ports all scanned we can specify which ports to run an nmap script scan on
+	-  nmap -sC -p \<ports\> -oA nibbles_script_scan \<ip address\> 
+	- script scans are loud so we want to be specific
+	- in the case of the HTB nibbles box we have ports 80, and 22
+	- we can round it off with the http-enum script, which can help enumerate common web app directories
+	- nmap -sV --script=http-enum -oA nibbles_nmap_http_enum \<ip address\> 
+	- 
+- ssh is now native to windows 10 since version 1809

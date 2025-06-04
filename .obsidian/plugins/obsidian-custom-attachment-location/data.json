@@ -1,0 +1,24 @@
+{
+  "attachmentFolderPath": "./${fileName}/attachments",
+  "attachmentRenameMode": "Only pasted images",
+  "customTokensStr": "",
+  "duplicateNameSeparator": " ",
+  "emptyAttachmentFolderBehavior": "DeleteWithEmptyParents",
+  "excludePaths": [],
+  "generatedAttachmentFilename": "${fileName}-${date:YYYYMMDDTHHmmss}",
+  "includePaths": [],
+  "jpegQuality": 0.8,
+  "markdownUrlFormat": "",
+  "shouldConvertPastedImagesToJpeg": false,
+  "shouldDeleteOrphanAttachments": true,
+  "shouldRenameAttachmentFiles": true,
+  "shouldRenameAttachmentFolder": true,
+  "shouldRenameAttachmentsToLowerCase": false,
+  "shouldRenameCollectedAttachments": true,
+  "specialCharacters": "#^[]|*\\<>:?",
+  "specialCharactersReplacement": "-",
+  "treatAsAttachmentExtensions": [
+    ".excalidraw.md"
+  ],
+  "warningVersion": "7.8.0"
+}
