@@ -11,12 +11,14 @@
             "id": "dc0f9a9db3041e0b",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "HTB/footprinting/attachments/20240608205941.png"
+                "file": "HTB/footprinting/automating-recon.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "20240608205941"
+              "icon": "lucide-file",
+              "title": "automating-recon"
             }
           }
         ]
@@ -76,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 471.5
+    "width": 244.5
   },
   "right": {
     "id": "9458424f11807f28",
@@ -179,6 +181,8 @@
   },
   "active": "dc0f9a9db3041e0b",
   "lastOpenFiles": [
+    "HTB/footprinting/attachments/20240608205941.png",
+    "HTB/footprinting/automating-recon.md",
     "HTB/footprinting/attachments/20240608202756.png",
     "HTB/footprinting/attachments/20240608202519.png",
     "HTB/footprinting/attachments/20240603010327.png",
@@ -189,7 +193,6 @@
     "HTB/footprinting/attachments/20231003121250.png",
     "HTB/footprinting/attachments/20231003120926.png",
     "HTB/footprinting/attachments/20231003044015.png",
-    "HTB/footprinting/attachments/20231003031628.png",
     "README.md",
     "HTB/footprinting/crawling.md",
     "HTB/boxes/inlanefreight.md",
@@ -216,7 +219,6 @@
     "HTB/footprinting/Active Infrastructure Identification.md",
     "HTB/footprinting/scans/185.6.124.171.md",
     "HTB/footprinting/scans/zone transfers 1.md",
-    "HTB/footprinting/zone transfers.md",
     "HTB/footprinting/scans",
     "HTB/using-htb",
     "misc-challenges",
