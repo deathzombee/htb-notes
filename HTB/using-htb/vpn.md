@@ -48,3 +48,76 @@ Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
 Here can see that the 10.129.0.0/16 network used for HTB Academy machines is accessible via the `tun0` adapter via the 10.10.14.0/23 network.
 
 ---
+
+
+## ip namespaces
+
+```bash
+#!/bin/bash
+
+NS_NAME="htb"
+TUN_DEV="veth-htb"
+TUN_PEER="veth-main"
+NS_IP="10.200.200.2/30"
+MAIN_IP="10.200.200.1/30"
+WAN_IF="wlan0" # your normal internet interface
+
+# Clean up
+ip netns del "$NS_NAME" 2>/dev/null
+ip link del "$TUN_PEER" 2>/dev/null
+
+# Create namespace and loopback
+ip netns add "$NS_NAME"
+ip netns exec "$NS_NAME" ip link set lo up
+
+# Create veth pair
+ip link add "$TUN_DEV" type veth peer name "$TUN_PEER"
+ip link set "$TUN_DEV" netns "$NS_NAME"
+
+# Assign IPs
+ip addr add "$MAIN_IP" dev "$TUN_PEER"
+ip link set "$TUN_PEER" up
+ip netns exec "$NS_NAME" ip addr add "$NS_IP" dev "$TUN_DEV"
+ip netns exec "$NS_NAME" ip link set "$TUN_DEV" up
+
+# Default route in namespace
+ip netns exec "$NS_NAME" ip route add default via 10.200.200.1
+
+# Enable forwarding
+sysctl -w net.ipv4.ip_forward=1
+
+# NAT out through your  WAN 
+iptables -t nat -C POSTROUTING -s 10.200.200.0/30 -o "$WAN_IF" -j MASQUERADE 2>/dev/null ||
+    iptables -t nat -A POSTROUTING -s 10.200.200.0/30 -o "$WAN_IF" -j MASQUERADE
+
+# DNS for namespace
+mkdir -p /etc/netns/$NS_NAME
+echo "nameserver 1.1.1.1" >/etc/netns/$NS_NAME/resolv.conf
+
+echo "[+] Namespace '$NS_NAME' is isolated and routes out via '$WAN_IF'."
+echo "    Run OpenVPN with:"
+echo "    sudo ip netns exec $NS_NAME openvpn --config /path/to/htb.ovpn"
+```
+
+run this
+```bash
+sudo ip netns exec htb openvpn --config academy-regular.ovpn
+```
+
+
+in .zshrc add 
+
+```zsh
+#htb namespace 
+htbuser() {
+  sudo ip netns exec htb env $(env | grep -E '^(SHELL|HOME|PATH|ZDOTDIR|USER|LOGNAME|USERNAME|PYENV|VIRTUAL_ENV|SDKMAN|GRADLE_HOME|JAVA_HOME|PERL|PICO|DISPLAY|WAYLAND|XDG|TERM|COLORTERM|LS_COLORS|OO_PS4_TOOLCHAIN|KITTY|HYPRLAND|LANG|SSH_AUTH_SOCK|DBUS_SESSION_BUS_ADDRESS)=' | xargs) \
+  sudo -u "$USER" "$@"
+}
+```
+
+source `.zshrc`
+
+and then run commands prefixed with `htbuser`
+
+to use `pyenv` set the global pyenv to the virtualenv you need
+
